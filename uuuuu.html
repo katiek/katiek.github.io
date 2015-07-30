@@ -4,22 +4,24 @@
 <head>
     <title></title>
     <style type="text/css">
-    body {
+    body /*{
     	background-image: url(http://images.all-free-download.com/images/graphicthumb/wood_background_hd_picture_4_169843.jpg);
         background-size: inherit;
 /*        background-repeat: no-repeat;
-*/        min-width: 110%;
-        min-height: 110%;
+
+*/        /*min-width: 110%;
+        min-height: 110%;*/
 /*        padding: 0px;
-margin:0;
-*/    }
+margin-top: 0;
+margin-left:0;
+*/    /* }*/
     
     .polaroid_border {
         height: 250px;
         width: 200px;
-        /*        background-color: #F3F3F6;
-*/		
-        background-color: #FbF9F3;
+        background-color: #F3F3F6;
+		
+     /*   background-color: #FbF9F3;*/
         padding: 20px;
         box-shadow: inset 0 0 20px #F0EAD6, 0 0 5px #000;
         /*        box-shadow:0 0 5px #000;
@@ -54,6 +56,7 @@ margin:0;
         background-image: url(http://www.bassfishin.com/img/vintage-fishing-tackle.jpg);
         background-size: cover;
         border-radius: 1px;
+        box-shadow: 2px 2px 20px #F0EAD6;
     }
     </style>
 </head>
@@ -69,7 +72,7 @@ margin:0;
     // var polaroid_with_border_and_picture_div = document.createElement('div');
     // polaroid_with_border_and_picture_div.className = "polaroid_with_border_and_picture";
     // document.body.appendChild(polaroid_with_border_and_picture);
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 40; i++) {
         var polaroid_border_div = document.createElement('div');
         polaroid_border_div.className = "polaroid_border";
         //        polaroid_border_div.style.left = 2*i + "%";
