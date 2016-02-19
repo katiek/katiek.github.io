@@ -20,14 +20,14 @@
     };
 
      var myCircles = []; // make an empty array to hold all my Circles
-    for (var i = 0; i < 10; i++) { // make ten of them
+    for (var i = 0; i < 100; i++) { // make ten of them
         myCircles.push(new Circle(Math.random() * 100)); // with random radii from 0 -> 100, sticking them into the myCircles array
     };
 
     var Circle = function(radius){
-    	this.name= "Katie"
-    	this.div = document.createElement.('div');
-    	this.div.style.width = radius + 'px';
+    	// this.name= "Katie"
+    	this.div = document.createElement('div');
+    	this.div.style.width = radius + "px";
     	this.div.style.height = radius + "px";
     	this.div.style.left = Math.random ()*100 + "%";
     	this.div.style.right = Math.random ()*100 + "%";
