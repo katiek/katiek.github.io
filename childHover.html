@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+    #parent, #parent2 {
+        width: 500px;
+        height: 500px;
+        background-color: grey;
+    }
+    
+    #child1, #child3 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    
+    #child2, #child4 {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        visibility: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <div id='parent'>
+        <div id='child1'></div>
+        <div id='child2'></div>
+    </div>
+    <div id='parent2'>
+        <div id='child3'></div>
+        <div id='child4'></div>
+    </div>
+    <script>
+    var child1 = document.getElementById('child1');
+    var showChild2 = function() {
+        var child2 = document.getElementById('child2');
+        child2.style.visibility = 'visible';
+    }
+    child1.addEventListener('mouseenter', showChild2);
+
+    var hideChild2 = function() {
+        var child2 = document.getElementById('child2');
+        child2.style.visibility = 'hidden';
+    }
+    child1.addEventListener('mouseout', hideChild2);
+
+    var makeChild2Green = function(event) {
+        var child2 = event.target.nextElementSibling;
+        child2.style.backgroundColor = 'green';
+    }
+    child1.addEventListener('mousedown', makeChild2Green);
+
+    var makeChild2Yellow = function() {
+        var child2 = document.getElementById('child2');
+        child2.style.backgroundColor = 'yellow';
+    }
+    child1.addEventListener('mouseup', makeChild2Yellow);
+
+    var child3 = document.getElementById('child3');
+    child3.addEventListener('mousedown', makeChild2Green);
+
+    </script>
+</body>
+
+</html>

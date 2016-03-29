@@ -1,33 +1,76 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <title></title>
+    <style type="text/css">
+    body {
+    	background-color: grey;
+    }
+    h1 {
+    	font-family: 'Walter Turncoat';
+    }
+    p {
+    	visibility: hidden;
+    	position: absolute;
+    	left: 30%;
+    }
+
+    .visible {
+    	visibility: visible;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Walter+Turncoat" />
 </head>
+
 <body>
-<div id= "journal">
-<h1>Katie's Notebook</h1>
+    <div id="journal">
+        <h1>Katie's Notebook</h1>
+        <div>
+            <h2 id="entry_date">1/28/2016</h2>
+            <p id="entry" style='top: 45px'>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
+            </p>
+        </div>
+        <div>
+            <h2>2/10/2016</h2>
+            <p>Stop thinking about the CODE for project!!!!!!!!!!!! Design the best UI, once done then you can drive yourself nuts about the code and potential issues. Write on post its "No Code" and put up around the house...
+            </p>
+        </div>
+        <div>
+            <h2>2/11/2016</h2>
+            <p style="top: 270px">Suzi Curran's Card http://codepen.io/katiek/pen/OMrxpo
+            </p>
+        </div>
+        <div>
+            <h2>2/18/2016</h2>
+            <p style="top: 309px">Suzi Curran's updated card http://codepen.io/katiek/pen/OMrxpo Updated again http://codepen.io/katiek/pen/OMrxpo
+            </p>
+        </div>
+        <script type="text/javascript">
+        var myh2s = Array.from(document.querySelectorAll("h2"));
+
+        myh2s.forEach(function(entry_date) {
+            var showEntry = function(eventData) {
+                var sibling = eventData.target.nextElementSibling;
+                sibling.classList.toggle('visible');
+                // sibling.style.visibility = 'visible';
+            }
+            entry_date.addEventListener('mousedown', showEntry);
+
+            var hideEntry = function(eventData) {
+                var sibling = eventData.target.nextElementSibling;
+                sibling.style.visibility = 'hidden';
+            }
+            // entry_date.addEventListener('mouseup', hideEntry);
+
+            // var displayEntry = function(eventData) {
+            // 	eventData.target.style.visibility = 'visible';
+            // }
+            // entry_date.addEventListener('click', displayEntry);
+        });
+
+        // var entry_date = document.getElementById('entry_date');
+        </script>
 </body>
+
 </html>
-
-GitHub ID: suzicurran
-Name: Suzi email suzicurran@gmail.com
-MIT but Investment Management/Endowments/ Where can they make the best room for growth
-Admin Asst for 4 of 16 money managers
-Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
-
-2/10/2016
-
-Stop thinking about the CODE for project!!!!!!!!!!!! Design the best UI, once done then you can drive yourself nuts about the code and potential issues.
-
-Write on post its "No Code" and put up around the house...
-
-
-2/11/2016
-
-Suzi Curran's Card http://codepen.io/katiek/pen/OMrxpo
-
-
-2/18/2016
-
-Suzi Curran's updated card http://codepen.io/katiek/pen/OMrxpo
-Updated again http://codepen.io/katiek/pen/OMrxpo
