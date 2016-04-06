@@ -2,75 +2,166 @@
 <html>
 
 <head>
-    <title></title>
+    <title>Candidly KatieK</title>
     <style type="text/css">
     body {
-    	background-color: grey;
+        background-image: url(./cork-board.jpg);
     }
+    
+    .post_it {
+        height: 225px;
+        width: 225px;
+        background-color: #FFFFA5;
+        box-shadow: 5px 5px 20px black;
+        visibility: hidden;
+        position: absolute;
+        left: 30%;
+        font-size: small;
+        border-radius: 1%;
+    }
+    
+    .post_it .thumbtack {
+        height: 15px;
+        width: 15px;
+        background-color: #BCC6CC;
+        border-radius: 50%;
+        box-shadow: 2px 2px 1px rgba(115,115,0,.8);
+        background: radial-gradient(white 15%, #BCC6CC 55%, #BCCbCC 100%);
+        
+    }
+    
+    .post_it p {
+        white-space: nowrap;
+        width: 95%;
+        height: 95%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
     h1 {
-    	font-family: 'Walter Turncoat';
+        font-family: 'Walter Turncoat';
     }
-    p {
-    	visibility: hidden;
-    	position: absolute;
-    	left: 30%;
-    }
-
+    
     .visible {
-    	visibility: visible;
+        visibility: visible;
     }
     </style>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Walter+Turncoat" />
 </head>
 
 <body>
-    <div id="journal">
-        <h1>Katie's Notebook</h1>
-        <div>
-            <h2 id="entry_date">1/28/2016</h2>
-            <p id="entry" style='top: 45px'>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
-            </p>
-        </div>
-        <div>
-            <h2>2/10/2016</h2>
-            <p>Stop thinking about the CODE for project!!!!!!!!!!!! Design the best UI, once done then you can drive yourself nuts about the code and potential issues. Write on post its "No Code" and put up around the house...
-            </p>
-        </div>
-        <div>
-            <h2>2/11/2016</h2>
-            <p style="top: 270px">Suzi Curran's Card http://codepen.io/katiek/pen/OMrxpo
-            </p>
-        </div>
-        <div>
-            <h2>2/18/2016</h2>
-            <p style="top: 309px">Suzi Curran's updated card http://codepen.io/katiek/pen/OMrxpo Updated again http://codepen.io/katiek/pen/OMrxpo
-            </p>
+    <div id="corkboard">
+        <h1>Candidly KatieK!</h1>
+        <div class="corkboard_addition">
+            <h2 class="date">1/28/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
+                </p>
+            </div>
+
+<!--             <h2 class="date">4/6/2016</h2>
+            <div class="polaroid_border">
+                <div class="thumbtack"></div>
+                <div class="polaroid_picture"></div>
+            </div>
+ -->
+
+            <h2 class="date">2/10/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>Stop thinking about the CODE for project!!!!!!!!!!!! Design the best UI, once done then you can drive yourself nuts about the code and potential issues. Write on post its "No Code" and put up around the house...
+                </p>
+            </div>
+            <h2 class="date">2/11/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>Suzi Curran's Card http://codepen.io/katiek/pen/OMrxpo
+                </p>
+            </div>
+            <h2 class="date">2/18/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>Suzi Curran's updated card http://codepen.io/katiek/pen/OMrxpo Updated again http://codepen.io/katiek/pen/OMrxpo
+                </p>
+            </div>
+            <h2 class="date">3/13/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p> OWC 240ish GB arrived Friday, swapping out hardrives today. So aware flight leaves to Rome in like 6 hrs...After two hours of attempts to migrate old harddrive into new larger drive, went to OWC (would be nice if there was a glossary or some sort of dictionary to explain in lay terms what the heck is happening on the migration screen) I followed directions, obviously incorrectly and erased the old hard drive. As I needed to leave for the airport in 2 hours, I went ahead and reinstalled os per OWC instructions and then uploaded my last external Time Machine save in November 2015. At this point I had no idea I formatted my old hard drive.
+                </p>
+            </div>
+            <h2 class="date">3/17/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>In Rome. At dinner at Palazzo Dama, my laptop is my date as Morgan and Antonio are at a very fancy gala tonight...So not as easy as I thought having to resetup my computer (btw I would love spellcheck in Sublime, I keep waiting for the red squiggle line to pop up under my words, totally spelt with phonetics or words I think should be in existence but others do not and there is some other proper way to say what I am trying to say-side note, I think spelt it a grain not a verb- I think should.) Had to redownload all programs since November, trying to get Github files back on the desktop. In any event, this is kinda a pain in the *ss.
+                </p>
+            </div>
+            <h2 class="date">3/28/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>It's official I formatted my old harddrive. I do love that I think the triple threat aka Alec, Bakhtiar and Shaunalynn, can fix any and every potential computer snafoo I manage to get myself in. Best part of this format, Alec was not able to find anything on my old drive and I am totally fine with it. In fact, I think he felt worse than I did about losing my old drive. I must have known I did it and came to terms with it subconciously before allowing my subconcious feeling be confirmed in real time. In any event, Alec got Github Desktop back up and running on my laptop, we synced all files again and away we went to my journal layout. setup
+                </p>
+            </div>
         </div>
         <script type="text/javascript">
-        var myh2s = Array.from(document.querySelectorAll("h2"));
+        var mydates = Array.from(document.querySelectorAll("h2.date"));
 
-        myh2s.forEach(function(entry_date) {
-            var showEntry = function(eventData) {
+        mydates.forEach(function(date) {
+            var toggleAddition = function(eventData) {
                 var sibling = eventData.target.nextElementSibling;
                 sibling.classList.toggle('visible');
-                // sibling.style.visibility = 'visible';
             }
-            entry_date.addEventListener('mousedown', showEntry);
+            date.addEventListener('click', toggleAddition);
 
-            var hideEntry = function(eventData) {
-                var sibling = eventData.target.nextElementSibling;
-                sibling.style.visibility = 'hidden';
-            }
-            // entry_date.addEventListener('mouseup', hideEntry);
-
-            // var displayEntry = function(eventData) {
-            // 	eventData.target.style.visibility = 'visible';
-            // }
-            // entry_date.addEventListener('click', displayEntry);
         });
-
-        // var entry_date = document.getElementById('entry_date');
         </script>
 </body>
 
 </html>
+<!-- 4/6/2016 code before we changed it <div id="corkboard">
+        <h1>Candidly KatieK!</h1>
+        <div class="entry">
+            <h2 id="entry_date">1/28/2016</h2>
+            <!           <p class="post_it" id="entry" style='top: 45px'>
+ 
+            <p>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
+            </p>
+        </div>
+ //        var myh2s = Array.from(document.querySelectorAll("h2"));
+
+ //        myh2s.forEach(function(entry_date) {
+ //            var showEntry = function(eventData) {
+ //                var sibling = eventData.target.nextElementSibling;
+ //                sibling.classList.toggle('visible');
+ //                // sibling.style.visibility = 'visible';
+ //            }
+ //            entry_date.addEventListener('mousedown', showEntry);
+
+ //            var hideEntry = function(eventData) {
+ //                    var sibling = eventData.target.nextElementSibling;
+ //                    sibling.style.visibility = 'hidden';
+ //                }
+ //                // entry_date.addEventListener('mouseup', hideEntry);
+
+ //            // var displayEntry = function(eventData) {
+ //            //  eventData.target.style.visibility = 'visible';
+ //            // }
+ //            // entry_date.addEventListener('click', displayEntry);
+ //        });
+
+ //        // var entry_date = document.getElementById('entry_date');
+ //        </script>
+
+
+1. overflow
+2. polaroid redering
+3.  div add on of div corkboard additions 
+4. how do I want the elements to be displayed - grid or random or a almost combo of grid and random
+5.corkboard set layout-border
+6. user navigation of poaroids and post-its
+
+
+Live display of additions
+thumbtack position absolute 
+
