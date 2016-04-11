@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <style>
+    .on {
+        background-color: black;
+    }
+    
+    /*.square .on {
+        border-color: black;
+        border-style: line;
+    }*/
+    </style>
+</head>
+
+<body>
+    <script>
+    var box = document.createElement('box');
+    box.style.height = '100%';
+    box.style.width = '100%';
+    box.style.position = 'fixed';
+    box.style.left = '0px';
+    box.style.top = '0px';
+    box.style.backgroundColor = 'red';
+    var square = function(area) { // define a new function to make a circle of a given radius
+        var self = this;
+
+        this.area = area; // store the radius we're given
+        this.square = document.createElement('square'); // create the square that we're going to use to display the circle
+
+        this.square.style.width = area + 'px'; // set its width 
+        this.square.style.height = area + 'px'; // and height to twice our radius        
+        this.square.style.display = 'inline-block';
+
+        this.square.style.border = '1px dotted darkgrey';
+
+        this.square.addEventListener('click', function() {
+            self.square.classList.toggle('on');
+            self.square.style.border = 'hidden'; // hides border buts screws up layout, adds gap between lines
+            console.log(self.square.classList);
+        });
+
+        document.body.appendChild(this.square); // and then stick the square we've created in our page;
+
+    };
+    var myBody = document.body;
+    myBody.appendChild(box);
+    for (var i = 0; i <= screen.height; i++) { // attempting to fill screen
+        new square(25);
+    };
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html> //copied from original squarepeeps file
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var box = document.createElement('box');
+    box.style.height = '100%';
+    box.style.width = '100%';
+    box.style.position = 'fixed';
+    box.style.left = '0px';
+    box.style.top = '0px';
+    box.style.backgroundColor = 'red';
+
+    var square = document.createElement('square');
+    square.style.left = '0px';
+    square.style.top = '0px';
+
+    var square = function(size) {
+        this.size = size;
+
+        this.div = document.createElement('div');
+        this.div.style.width = size + 'px';
+        this.div.style.height = size + 'px';
+        this.div.style.display = 'inline-block';
+
+
+        this.div.style.backgroundColor = 'white';
+        this.div.style.border = '1px dashed darkgrey';
+
+        this.div.style.margin = '0';
+        this.div.style.padding = '0';
+
+        document.body.appendChild(this.div);
+
+    };
+
+    
+
+    var myBox = document.box;
+    myBox.appendChild(square);
+
+    for (var i = 0; i < 200; i++) {
+        new square(80);
+    };
+    </script>
+</body>
+
+</html>
+ -->

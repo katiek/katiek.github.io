@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var box = document.createElement('box');
+    box.style.height = '100%';
+    box.style.width = '100%';
+    box.style.position = 'fixed';
+    box.style.left = '0px';
+    box.style.top = '0px';
+    box.style.backgroundColor = 'red';
+
+    var square = document.createElement('square');
+    square.style.left = '0px';
+    square.style.top = '0px';
+
+    var square = function(size) {
+        this.size = size;
+
+        this.div = document.createElement('div');
+        this.div.style.width = size + 'px';
+        this.div.style.height = size + 'px';
+        this.div.style.display = 'inline-block';
+
+
+        this.div.style.backgroundColor = 'white';
+        this.div.style.border = '1px dashed darkgrey';
+
+        this.div.style.margin = '0';
+        this.div.style.padding = '0';
+
+        document.body.appendChild(this.div);
+
+    };
+
+    
+
+    // var myBox = document.box;
+    // myBox.appendChild(square);
+
+    for (var i = 0; i < 200; i++) {
+        new square(80);
+    };
+    </script>
+</body>
+
+</html>
