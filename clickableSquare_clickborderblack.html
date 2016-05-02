@@ -5,12 +5,13 @@
 
     .on {
         background-color:black;
+        border:1px solid black !important;
 
     }
-    .square .on{
+   /* .size .on{
         border-color:black;
         border-style:line;
-    }
+    }*/
     </style>
 </head>
 
@@ -23,17 +24,20 @@
     box.style.position = 'fixed';
     box.style.left = '0px';
     box.style.top = '0px';
-    box.style.backgroundColor = 'red';
-    var Square = function(area) { // define a new function to make a circle of a given radius
+    // box.style.backgroundColor = 'red';
+    var row = document.createElement('row');
+    row.style.height = '25px';
+    row.style.width = '100%';
+    var Square = function(size) { // define a new function to make a circle of a given radius
         var self = this;
 
-        this.area = area; // store the radius we're given
+        this.size = size; // store the radius we're given
         this.square = document.createElement('square'); // create the square that we're going to use to display the circle
       
-        this.square.style.width = area + 'px'; // set its width 
-        this.square.style.height = area + 'px'; // and height to twice our radius        
-        this.square.style.display = 'inline-block';
-        // this.square.style.border-top = '1px dotted darkgrey';
+        this.square.style.width = size + 'px'; // set its width 
+        this.square.style.height = size + 'px'; // and height to twice our radius        
+        this.square.style.float = 'left';
+        this.square.style.border = '1px dotted darkgrey';
         // this.square.style.border-left = '1px dotted darkgrey';
 
         this.square.addEventListener('click', function() {
@@ -41,13 +45,15 @@
             console.log(self.square.classList);
         });
 
-        document.body.appendChild(this.square); // and then stick the square we've created in our page;
+        document.body.appendChild(this.row); // and then stick the square we've created in our page;
 
     };
 
     for (var i = 0; i <= screen.height; i++) { // attempting to fill screen  ten of them
-        new Square(25);
+        new Square(80);
     };
+      var myBody = document.body;
+    myBody.appendChild(box);
     </script>
 </body>
 
