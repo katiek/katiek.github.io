@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+    body {
+        margin:0;
+        padding:0;
+
+    }
+
+    .on {
+        background-color:black;
+        border:1px solid black !important;
+    }
+
+    </style>
+</head>
+
+<body>
+    
+    <script>
+
+    var Square = function(size) { // define a new function to make a circle of a given radius
+        var self = this;
+
+        this.size = size;
+
+        this.div = document.createElement('div'); // create the div that we're going to use to display the circle
+
+        this.div.style.width = this.size - 2 + 'px'; // set its width - border width (2px)
+        this.div.style.height = this.size - 2 + 'px'; // and height to twice our radius - border height (2px)
+        this.div.style.display = 'inline-block';
+
+        this.div.style.border = '1px dotted darkgrey';
+
+        this.div.addEventListener('click', function() {
+            self.div.classList.toggle('on');
+            console.log(self.div.classList);
+        });
+
+        document.body.appendChild(this.div); // and then stick the div we've created in our page;
+
+    };
+
+    var squareSize = 50;
+    var squaresPerRow = 50;
+    
+    document.body.style.height = squareSize * squaresPerRow + 'px';
+    document.body.style.width = squareSize * squaresPerRow + 'px';
+    var totalSquares = squaresPerRow * squaresPerRow;
+
+    for (var i = 0; i < totalSquares; i++) { 
+        new Square(squareSize);
+    };
+    </script>
+</body>
+
+</html>
