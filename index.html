@@ -8,6 +8,27 @@
         background-image: url(./cork-board.jpg);
     }
     
+    .banner {
+       /* font-family: 'Open Sans', sans-serif;
+        background: #A5A5A5;*/
+        /*    padding: 3px;
+*/
+        position: relative;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        color: #333;
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        /*  min-height: 2em;
+  min-width: 10em;*/
+        box-shadow: -0.3em 0.3em 0.5em rgba(0, 0, 0, 0.2);
+    }
+
+    .banner b {
+        color: red;
+    }
+    
     .polaroid {
         height: 375px;
         width: 300px;
@@ -53,6 +74,7 @@
         left: 30%;
         font-size: small;
         border-radius: 1%;
+        overflow: scroll;
     }
     
     .post_it .thumbtack {
@@ -66,12 +88,16 @@
     }
     
     .post_it p {
-        /*        white-space: nowrap;
+        /*  white-space: nowrap;
 */
-        width: 95%;
-        height: 95%;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        /* overflow: hidden;
+*/
+        /*     text-overflow: ellipsis;
+*/
+        /* width: 95%;
+*/
+        /*height: 95%;
+ */
     }
     
     h1 {
@@ -87,6 +113,12 @@
 
 <body>
     <div id="corkboard">
+        <div class="banner">
+            <div class="content">
+                <h3>Just when you thought it was safe to refresh...<b>BAM!</b> New content added!</h3>
+                <p class="description">Expect significant and constant updates to page without warning...Okay, maybe some warning ;) </p>
+            </div>
+        </div>
         <h1>Candidly KatieK!</h1>
         <div class="corkboard_addition">
             <h2 class="date">1/28/2016</h2>
@@ -163,8 +195,10 @@
                 <h2 class="date">3/28/2016</h2>
                 <div class="post_it">
                     <div class="thumbtack"></div>
-                    <p>It's official I formatted my old harddrive. I do love that I think the triple threat aka Alec, Bakhtiar and Shaunalynn, can fix any and every potential computer snafoo I manage to get myself in. Best part of this format, Alec was not able to find anything on my old drive and I am totally fine with it. In fact, I think he felt worse than I did about losing my old drive. I must have known I did it and came to terms with it subconciously before allowing my subconcious feeling be confirmed in real time. In any event, Alec got Github Desktop back up and running on my laptop, we synced all files again and away we went to my journal layout. setup
-                    </p>
+                    <p>It's official I formatted my old harddrive!</p>
+                    <p>I do love that I think the triple threat aka Alec, Bakhtiar and Shaunalynn, can fix any and every potential computer snafoo I manage to get myself in. Best part of this format, Alec was not able to find anything on my old drive and I am totally fine with it. In fact, I think he felt worse than I did about losing my old drive.</p>
+                    <p>I must have known I did it and came to terms with it subconciously before allowing my subconcious feeling be confirmed in real time. In any event, Alec got Github Desktop back up and running on my laptop, we synced all files again and away we went to my journal layout and setup.</p>
+                    <p>Lesson from all of this, if it ain't broke don't try to fix it 5 hours before your flight to Rome.</p>
                 </div>
             </div>
         </div>
