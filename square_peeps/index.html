@@ -3,24 +3,27 @@
 <head>
     <style>
     body {
-        margin:0;
-        padding:0;
-
+        margin: 0;
+        padding: 0;
     }
-
+    
     .on {
-        background-color:black;
-        border:1px solid black !important;
+        background-color: black;
+        border: 1px solid black !important;
     }
-
     </style>
 </head>
 
 <body>
-    
     <script>
-
-    var Square = function(size) { // define a new function to make a circle of a given radius
+    var isMousedown = false;
+    document.addEventListener('mousedown', function() {
+        isMousedown = true;
+    });
+    document.addEventListener('mouseup', function() {
+        isMousedown = false;
+    });
+    var Square = function(size, row, column) { // define a new function to make a circle of a given radius
         var self = this;
 
         this.size = size;
@@ -29,13 +32,29 @@
 
         this.div.style.width = this.size - 2 + 'px'; // set its width - border width (2px)
         this.div.style.height = this.size - 2 + 'px'; // and height to twice our radius - border height (2px)
-        this.div.style.display = 'inline-block';
+
+
+        this.div.style.position = "absolute";
+        this.row = row;
+        this.column = column;
+        this.div.style.left = this.column * this.size + 'px';
+        this.div.style.top = this.row * this.size + 'px';
+
+
+        // this.div.style.display = 'inline-block';
 
         this.div.style.border = '1px dotted darkgrey';
 
-        this.div.addEventListener('click', function() {
+        this.div.addEventListener('mousedown', function() {
             self.div.classList.toggle('on');
             console.log(self.div.classList);
+        });
+
+        this.div.addEventListener('mouseover', function() {
+            if (isMousedown) {
+                self.div.classList.add('on');
+                console.log(self.div.classList);
+            }
         });
 
         document.body.appendChild(this.div); // and then stick the div we've created in our page;
@@ -43,15 +62,24 @@
     };
 
     var squareSize = 50;
-    var squaresPerRow = 50;
-    
-    document.body.style.height = squareSize * squaresPerRow + 'px';
-    document.body.style.width = squareSize * squaresPerRow + 'px';
-    var totalSquares = squaresPerRow * squaresPerRow;
+    var squaresPerRow = 200;
+    var squaresPerColumn = 200;
+    var totalSquares = squaresPerRow * squaresPerColumn;
 
-    for (var i = 0; i < totalSquares; i++) { 
-        new Square(squareSize);
+    document.body.style.height = squareSize * squaresPerColumn + 'px';
+    document.body.style.width = squareSize * squaresPerRow + 'px';
+
+    for (var i = 0; i < squaresPerRow; i++) {
+        for (var j = 0; j < squaresPerColumn; j++) {
+            new Square(squareSize, j, i);
+        }
     };
+
+
+    window.addEventListener('load', function() {
+        window.scrollTo(squareSize * squaresPerRow / 2 - window.innerWidth / 2, squareSize * squaresPerColumn / 2 - window.innerHeight / 2);
+    });
+    console.log(document.body.style.width, squareSize * squaresPerRow / 2 - window.innerWidth / 2);
     </script>
 </body>
 
