@@ -3,196 +3,267 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DGMD E/S-15: Creative Explorations in Screen-Based and Physical Computing</title>
-    <meta name="description" content="Digital Media — Creative Explorations in Screen-Based and Physical Computing">
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Candidly KatieK</title>
+    <style type="text/css">
+    body {
+        background-image: url("cork-board.jpg");
+        width: 100%;
+    }
+
+    .banner {
+        /* font-family: 'Open Sans', sans-serif;
+        background: #A5A5A5;*/
+        /*    padding: 3px;
+*/
+        position: relative;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        color: #333;
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        /*  min-height: 2em;
+  min-width: 10em;*/
+        box-shadow: -0.3em 0.3em 0.5em rgba(0, 0, 0, 0.2);
+    }
+
+    .banner b {
+        color: red;
+    }
+
+    .polaroid {
+        height: 375px;
+        width: 300px;
+        background-color: #F3F3F6;
+        /*   background-color: #FbF9F3;*/
+        padding: 20px;
+        box-shadow: inset 0 0 20px #F0EAD6, 0 0 5px #000;
+        /*        box-shadow:0 0 5px #000;
+*/
+        border-radius: 1px;
+        display: inline-block;
+        margin: 5px;
+        position: fixed;
+        visibility: hidden;
+        left: 40%;
+    }
+
+    .polaroid .picture {
+        height: 300px;
+        width: 300px;
+        border-radius: 1px;
+        box-shadow: 2px 2px 20px #F0EAD6;
+        overflow: hidden;
+    }
+
+    .polaroid .picture img {
+        height: 100%;
+    }
+
+    .polaroid .picture div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .post_it {
+        height: 300px;
+        width: 300px;
+        background-color: #FFFFA5;
+        box-shadow: 0 0 20px black;
+        visibility: hidden;
+        position: absolute;
+        left: 30%;
+        font-size: small;
+        border-radius: 1%;
+        overflow: scroll;
+    }
+
+    .post_it .thumbtack {
+        height: 17px;
+        width: 17px;
+        background-color: #BCC6CC;
+        border-radius: 50%;
+        box-shadow: 0 0 1px rgba(115, 115, 0, .9);
+        background: radial-gradient(#BCC6CC 25%, white 68%, #BCCbCC 70%);
+        position:
+    }
+
+    .post_it p {
+        /*  white-space: nowrap;
+*/
+        /* overflow: hidden;
+*/
+        /*     text-overflow: ellipsis;
+*/
+        /* width: 95%;
+*/
+        /*height: 95%;
+ */
+    }
+
+    h1 {
+        font-family: 'Walter Turncoat';
+    }
+
+    .visible {
+        visibility: visible;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Walter+Turncoat" />
 </head>
 
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-custom">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">DGMD E/S-15</a>
+    <div id="corkboard">
+        <div class="banner">
+            <div class="content">
+                <h3>Just when you thought it was safe to refresh...<b>BAM!</b> New content added!</h3>
+                <p class="description">Expect significant and constant updates to page without warning.</p>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a id="home" href="index.html">Home</a></li>
-                <li><a id="spring2015" href="spring2015.html">Spring 2015</a></li>
-                <li><a id="summer2015" href="summer2015.html">Summer 2015</a></li>
-                <li><a id="spring2016" href="spring2016.html">Spring 2016</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="row content">
-        <div class="col-sm-2 sidenav text-center">
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
         </div>
-        <div class="col-sm-8 text-left">
-            <div class="wrapper">
-                <section>
-                    <p>
-                        Welcome to my portfolio for Harvard's course, DGMD E/S-15 <i>Creative Explorations in Screen-Based and Physical Computing</i>. I am extremely proud of the work I have done in this course and I have been able to a forward to you gaining a greater understanding about what I have been able to gain and accomplish through each instance I have taken this course at Harvard. I also expect my portfolio to serve as an impetus to greater understanding about this very unique course Harvard offers.
-                    </p>
-                </section>
-                <blockquote>
-                    <p class="mb-0">
-                        ...course introduces computing as an expressive medium. We prototype, exhibit, and critique interactive, computational stories, art, and games presented as web applications and physical prototypes.
-                    </p>
-                    <footer class="blockquote-footer">
-                        <cite><a href="http://dgmd.github.io/about/">DGMD E/S-15 Course Website</a></cite>
-                    </footer>
-                </blockquote>
-                <section>
-                    <p>
-                        As a student of <i>Creative Explorations in Screen-Based and Physical Computing</i>, you are put in charge of where your coursework takes you and when one takes this course, you embark on a brand new, immersive study in design, developement and technology. It is impossible to <em>repeat subject matter</em> through taking this course multiple times.
-                    </p>
-                    <p>
-                        A student's work and studies are based off of the student's current knowledge at the time. Therefore, each successful completion of my studies each instance I took this course, I walked away with a <em>new</em> interactive and deployable web application, gained <em>new</em> and extensive knowledge, and <em>new</em> excitement for furture Digital Media Design work at Harvard and beyond.
-                    </p>
-                </section>
-                <blockquote>
-                    <p class="mb-0">
-                        "A semester might not seem like a very long time when you want to build something, especially if you don't have much experience using these tools and technologies. It's possible, but it requires that you deeply immerse yourself in the processes of design and development over the four months."</p>
-                    <footer class="blockquote-footer">
-                        <cite><a href="http://dgmd.github.io/about/">DGMD E/S-15 Course Website</a></cite>
-                    </footer>
-                </blockquote>
-                <section>
-                    <p>
-                        To be successful in this course, a student must be willing to partake in extensive work and study in and out of the physical classroom. The onus is on the student and the student must figure out all the steps necessary in order to produce their own personal final project and presentation.
-                    </p>
-                    <p>
-                        My portfolio is broken into three parts, one for each semester I took this course. From there you will be able to explore and review my process and projects via my:
-                    </p>
-                    <ol>
-                        <li>General Notes</li>
-                        <li>Coursework</li>
-                        <li>Projects</li>
-                        <li>Next Steps</li>
-                    </ol>
-                    <p>
-                        Thank you in advance for your time and consideration reviewing my portfolio. If you have any questions or would like to speak to me directly, do not hesitate to <a class="email" href="mailto:kkorngold@gmail.com">email me.</a>
-                    </p>
-                </section>
-                <footer>
-                    <!-- Copyright -->
-                    <div id="copyright" class="footer-copyright text-center py-3">© 2018 Copyright:
-                        <a href="https://katiek.github.io/">Katharine J. Korngold</a>
+        <h1>Candidly KatieK!</h1>
+        <div class="corkboard_addition">
+            <h2 class="date">1/28/2016</h2>
+            <div class="post_it">
+                <div class="thumbtack"></div>
+                <p>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
+                </p>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">#1</h2>
+                <div class="polaroid">
+                    <div class="picture">
+                        <img style='transform:translateX(-30px);' src="cork-board.jpg">
                     </div>
-                    <!-- Copyright -->
-                </footer>
+                </div>
             </div>
         </div>
+            <!-- img style= 'transform:translateX(-any numberpx);' to center the picture in addition I assume one could also transform on the Y axis as well -->
+            <!--             <h2 class="date">4/6/2016</h2>
+            <div class="polaroid_border">
+                <div class="thumbtack"></div>
+                <div class="polaroid_picture"></div>
+            </div>
+
+ -->
+            <div class="corkboard_addition">
+                <h2 class="date">3/28/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>It's official I formatted my old harddrive!</p>
+                    <p>I do love that I think the triple threat aka Alec, Bakhtiar and Shaunalynn, can fix any and every potential computer snafoo I manage to get myself in. Best part of this format, Alec was not able to find anything on my old drive and I am totally fine with it. In fact, I think he felt worse than I did about losing my old drive.</p>
+                    <p>I must have known I did it and came to terms with it subconciously before allowing my subconcious feeling be confirmed in real time. In any event, Alec got Github Desktop back up and running on my laptop, we synced all files again and away we went to my journal layout and setup.</p>
+                    <p>Lesson from all of this, if it ain't broke don't try to fix it 5 hours before your flight to Rome.</p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">2/10/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>Stop thinking about the CODE for project!!!!!!!!!!!! Design the best UI, once done then you can drive yourself nuts about the code and potential issues. Write on post its "No Code" and put up around the house...
+                    </p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">2/11/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>Suzi Curran's Card http://codepen.io/katiek/pen/OMrxpo
+                    </p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">Final Presentation</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p><a href="http://katiek.github.io/Bass_Lady/">Bass Lady</a></p>
+                    <p><a href="http://katiek.github.io/Pixel_Ruler/">Pixel Ruler</a></p>
+                    <p><a href="http://katiek.github.io/SkinGraph/">Skin Graph</a></p>
+                    <p><a href="http://katiek.github.io/square_peeps/">Square Peeps?(totally need a better name)</a></p>
+                    <p><a href="https://github.com/katiek/Gittish">Gitti.sh</a></p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">2/18/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>Suzi Curran's updated card http://codepen.io/katiek/pen/OMrxpo Updated again http://codepen.io/katiek/pen/OMrxpo
+                    </p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">2/10/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>don't forget this is a work ing progress. Next up: 1. overflow 2. polaroid redering 3. div add on of div corkboard additions 4. how do I want the elements to be displayed - grid or random or a almost combo of grid and random 5.corkboard set layout-border 6. user navigation of poaroids and post-its Live display of additions thumbtack position absolute
+                    </p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">3/13/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p> OWC 240ish GB arrived Friday, swapping out hardrives today. So aware flight leaves to Rome in like 6 hrs...After two hours of attempts to migrate old harddrive into new larger drive, went to OWC (would be nice if there was a glossary or some sort of dictionary to explain in lay terms what the heck is happening on the migration screen) I followed directions, obviously incorrectly and erased the old hard drive. As I needed to leave for the airport in 2 hours, I went ahead and reinstalled os per OWC instructions and then uploaded my last external Time Machine save in November 2015. At this point I had no idea I formatted my old hard drive.
+                    </p>
+                </div>
+            </div>
+            <div class="corkboard_addition">
+                <h2 class="date">3/17/2016</h2>
+                <div class="post_it">
+                    <div class="thumbtack"></div>
+                    <p>In Rome. At dinner at Palazzo Dama, my laptop is my date as Morgan and Antonio are at a very fancy gala tonight...So not as easy as I thought having to resetup my computer (btw I would love spellcheck in Sublime, I keep waiting for the red squiggle line to pop up under my words, totally spelt with phonetics or words I think should be in existence but others do not and there is some other proper way to say what I am trying to say-side note, I think spelt it a grain not a verb- I think should.) Had to redownload all programs since November, trying to get Github files back on the desktop. In any event, this is kinda a pain in the *ss.
+                    </p>
+                </div>
+            </div>
+       
+
+      <!--   </div> -->
+        <script type="text/javascript">
+        var mydates = Array.from(document.querySelectorAll("h2.date"));
+
+        mydates.forEach(function(date) {
+            var toggleAddition = function(eventData) {
+                var sibling = eventData.target.nextElementSibling;
+                sibling.classList.toggle('visible');
+            }
+            date.addEventListener('click', toggleAddition);
+
+        });
+        </script>
+
 </body>
 
 </html>
-<!-- Additional code from <head> -->
-<!-- Latest compiled and minified CSS -->
-<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-<!--     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
- -->
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- -->
-<!-- Optional theme -->
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
- -->
-<!--  JQuery -->
-<!--     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
- -->
-<!-- Latest compiled and minified JavaScript -->
-<!--     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
- -->
-<!--     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- -->
-<!--  Unused code from body -->
-<!-- <div class="collapse navbar-collapse" id="myNavbar"> -->
-<!--  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button> -->
-<!-- <ul class="nav nav-pills">
-                <li class="active"><a data-toggle="pill" href="index.html">Home</a></li>
-                <li><a data-toggle="pill" href="Spring2015/index.html">Spring 2015</a></li>
-                <li><a data-toggle="pill" href="Summer2015/index.html">Summer 2015</a></li>
-                <li><a data-toggle="pill" href="Spring2016/index.html">Spring 2016</a></li>
-            </ul> -->
-<!-- <div class="tab-content">
-    <div id="home" class="tab-pane fade in active"><
-      <div class="col-sm-8 text-left">
-            <div class="wrapper">
-                <section>
-                    <p>
-                        Welcome to my portfolio for Harvard's course, DGMD E/S-15 <i>Creative Explorations in Screen-Based and Physical Computing</i>. I look forward to you learning more about the work I have done each instance I took this course at Harvard. I also expect my portfolio to be the impetus for greater understanding about this very unique course Harvard offers.
-                    </p>
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-0">...course introduces computing as an expressive medium. We prototype, exhibit, and critique interactive, computational stories, art, and games presented as web applications and physical prototypes.</p>
-                        <footer class="blockquote-footer">DGMD E/S-15 Course Website,
-                            <cite title="Source Title">http://dgmd.github.io/about/</cite>
-                        </footer>
-                    </blockquote>
-                    <p>
-                        As a student of <i>Creative Explorations in Screen-Based and Physical Computing</i>, you are put in charge of where your coursework takes you and when one takes this course, you embark on a brand new, immersive study in design, developement and technology. It is impossible to <em>repeat subject matter</em> through taking this course multiple times.
-                    </p>
-                    <p>
-                        A student's work and studies are based off of the student's current knowledge at the time. Therefore, each successful completion of my studies each instance I took this course, I walked away with a <em>new</em> interactive and deployable web application, gained <em>new</em> and extensive knowledge, and <em>new</em> excitement for furture Digital Media Design work at Harvard and beyond.
-                    </p>
-                </section>
-                <section>
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-0">A semester might not seem like a very long time when you want to build something, especially if you don't have much experience using these tools and technologies. It's possible, but it requires that you deeply immerse yourself in the processes of design and development over the four months. </p>
-                        <footer class="blockquote-footer">DGMD E/S-15 Course Website,
-                            <cite title="Source Title">http://dgmd.github.io/about/</cite>
-                        </footer>
-                    </blockquote>
-                </section>
-                <section>
-                    <p>
-                        To be successful in this course, a student must be willing to partake in extensive work and study in and out of the physical classroom. The onus is on the student and the student must figure out all the steps necessary in order to produce their own personal final project and presentation.
-                    </p>
-                    <p>
-                        My portfolio is broken into three parts, one for each semester I took this course. From there you will be able to explore and review my process and projects via my:
-                    </p>
-                    <ol>
-                        <li>General Notes</li>
-                        <li>Design Thinking</li>
-                        <li>Small-Scale Designs</li>
-                        <li>Final Projects &amp; Reflections</li>
-                        <li>Next Steps</li>
-                    </ol>
-                </section>
-            </div>
+<!-- 4/6/2016 code before we changed it <div id="corkboard">
+        <h1>Candidly KatieK!</h1>
+        <div class="entry">
+            <h2 id="entry_date">1/28/2016</h2>
+            <!           <p class="post_it" id="entry" style='top: 45px'>
+ 
+            <p>GitHub ID: suzicurran Name: Suzi email suzicurran@gmail.com MIT but Investment Management/Endowments/ Where can they make the best room for growth Admin Asst for 4 of 16 money managers Alaska for two years, realized not for her and moved back to the east coast. Now classes at different schools while working
+            </p>
         </div>
-    
-    <div id="spring2015" class="tab-pane fade">
-      <h3>Spring 2015</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="summer2015" class="tab-pane fade">
-      <h3>Summer 2015</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="spring2016" class="tab-pane fade">
-      <h3>Spring 2016</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div> -->
-<!--   unused script code
- -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+ //        var myh2s = Array.from(document.querySelectorAll("h2"));
+
+ //        myh2s.forEach(function(entry_date) {
+ //            var showEntry = function(eventData) {
+ //                var sibling = eventData.target.nextElementSibling;
+ //                sibling.classList.toggle('visible');
+ //                // sibling.style.visibility = 'visible';
+ //            }
+ //            entry_date.addEventListener('mousedown', showEntry);
+
+ //            var hideEntry = function(eventData) {
+ //                    var sibling = eventData.target.nextElementSibling;
+ //                    sibling.style.visibility = 'hidden';
+ //                }
+ //                // entry_date.addEventListener('mouseup', hideEntry);
+
+ //            // var displayEntry = function(eventData) {
+ //            //  eventData.target.style.visibility = 'visible';
+ //            // }
+ //            // entry_date.addEventListener('click', displayEntry);
+ //        });
+
+ //        // var entry_date = document.getElementById('entry_date');
+ //        </script>
